@@ -7,7 +7,7 @@ export default defineConfig({
       name: "trailing-slash-redirect",
       configureServer(server) {
         server.middlewares.use((req, _res, next) => {
-          if (req.url && !req.url.includes(".") && !req.url.endsWith("/")) {
+          if (req.url && !req.url.startsWith("/@") && !req.url.includes(".") && !req.url.endsWith("/")) {
             req.url += "/";
           }
           next();
