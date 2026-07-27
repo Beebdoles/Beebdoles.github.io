@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    background: #008080;
+    color: #000;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+#app {
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+/* desktop */
+.desktop {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 70vw;
+    height: 100vh;
+    background: #ffffff;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+/* taskbar */
+.taskbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6vh;
+    background-color: #c0c0c0;
+    padding: 2px;
+
+    box-shadow:
+        inset -3px -3px #0a0a0a,
+        inset  0px  0px #ffffff,
+        inset -4px -4px #808080,
+        inset  4px  4px #dfdfdf;
+}
+
+/* main window class */
+.window {
+    position: absolute; 
+    left: 0px;
+    top: 0px;
+    width: var(--width, 300px);
+    height: var(--height, 300px);
+    background: #c0c0c0;
+    padding: 3px;
+    z-index: 1;
+
+    box-shadow:
+        inset -1px -1px #0a0a0a,
+        inset  1px  1px #ffffff,
+        inset -2px -2px #808080,
+        inset  2px  2px #dfdfdf;
+}
+
+/* top window bar */
+.title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: #ffffff;
+    padding: 2px 3px;
+    cursor: move;
+    user-select: none;
+}
+
+/* title bar text */
+.title-bar-text {
+    font-weight: bold;
+    padding-left: 3px;
+}
+
+/* control buttons */
+.title-bar-controls {
+    display: flex;
+    gap: 2px;
+}
+
+/* title bar buttons */
+.title-btn {
+    width: 16px;
+    height: 14px;
+    padding: 0;
+    border: none;
+    background: #c0c0c0;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        inset -1px -1px #0a0a0a,
+        inset  1px  1px #ffffff,
+        inset -2px -2px #808080,
+        inset  2px  2px #dfdfdf;
+}
+
+.title-btn:active {
+    box-shadow:
+        inset  1px  1px #0a0a0a,
+        inset -1px -1px #ffffff,
+        inset  2px  2px #808080,
+        inset -2px -2px #dfdfdf;
+}
+
+.window-body {
+    margin: 8px 4px;
+}
